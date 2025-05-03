@@ -52,7 +52,7 @@ namespace Kursach.Controllers
         [HttpPost]
         public IActionResult AddListAchiev([FromBody] ListAchiev ListAchiev)
         {
-            if (ListAchiev == null || ListAchiev.User_Id != null)
+            if (ListAchiev == null)
             {
                 return BadRequest("Invalid ListAchiev data.");
             }

@@ -11,12 +11,12 @@ namespace Kursach.Models
         public int User_Id { get; set; }
         public int Achiev_Id { get; set; }
 
-        // Навигационные свойства
-        [ForeignKey("User_Id")]
-        public User User { get; set; }
+        //// Навигационные свойства
+        //[ForeignKey("User_Id")]
+        //public User User { get; set; }
 
-        [ForeignKey("Achiev_Id")]
-        public Achiev Achiev { get; set; }
+        //[ForeignKey("Achiev_Id")]
+        //public Achiev Achiev { get; set; }
     }
 }
 
