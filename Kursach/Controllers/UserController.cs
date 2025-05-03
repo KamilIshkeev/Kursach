@@ -68,14 +68,14 @@ namespace Kursach.Controllers
         }
 
         [HttpPost("authentication")]
-        public async Task<IActionResult> Authenticate([FromBody] LoginRequest loginRequest)
+        public async Task<IActionResult> Authenticate([FromBody] User loginRequest)
         {
             if (!ModelState.IsValid)
             {
                 return BadRequest(ModelState);
             }
 
-            var authenticatedUser = await _userService.AuthenticateAsync(loginRequest.Email, loginRequest.Password);
+            var authenticatedUser = await _userService.AuthenticateAsync(loginRequest.Login, loginRequest.Password);
             if (authenticatedUser == null)
             {
                 return Unauthorized();
